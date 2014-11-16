@@ -1,0 +1,30 @@
+<%= content_for :page_title, t('devise.registration') %>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'form-horizontal form-centered'}) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group">
+    <%= f.label :email, t('devise.email') %>
+    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password, t('devise.password') %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> <%= t('devise.characters_minimum') %>)</em>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation, t('devise.password_confirmation') %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit t('devise.registration'), class: 'btn btn-colored' %>
+  </div>
+
+  <%= render "devise/shared/links" %>
+<% end %>
+

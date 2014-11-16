@@ -50,6 +50,7 @@ gem 'metamagic' # meta keywords and description
 gem 'nprogress-rails'
 gem 'video_info'
 gem 'annotate'
+# gem 'devise-bootstrap-views'
 
 group :development do
   # gem 'mina'

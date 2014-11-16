@@ -10,6 +10,8 @@
 	General Styles
 -------------------------------------------------------*/
 
+@import 'vars';
+
 body {
 	background: image-url('bg-pattern.png');
 	font-family: 'Helvetica Neue', 'Arial' sans-serif;
@@ -23,7 +25,7 @@ body {
 body:before, body:after {
 	content: "";
 	position: absolute;
-	background: image-url('photos/bg.jpg') repeat-x; /* Images in background */
+//	background: image-url('photos/bg.jpg') repeat-x; /* Images in background */
 	width: 100%;
 	height: 498px;
 	top: 160px;
@@ -32,7 +34,7 @@ body:before, body:after {
 }
 
 body:after {
-	background: rgba(240, 73, 51, 0.85); /* Background color overlay */
+	background: $main-color; /* Background color overlay */
 }
 
 body.index:before, body.index:after {
@@ -40,7 +42,8 @@ body.index:before, body.index:after {
 }
 
 a {
-	color: #db4a37; /* Link color */
+//	color: $main-color; /* Link color */
+  color: $main-color;
 }
 
 a:hover {
@@ -81,7 +84,7 @@ h1, h2 {
 } 
 
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
-	color: #db4a37;
+	color: $main-color;
 }
 
 h1 {
@@ -146,7 +149,7 @@ main h2:before {
 }
 
 .fa-ul .fa {
-	color: #db4a37;
+	color: $main-color;
 	line-height: 24px;
 }
 
@@ -160,12 +163,12 @@ ol {
 ol li:before {
 	content: counter(my-badass-counter) '.';
 	counter-increment: my-badass-counter;
-	color: #db4a37;
+	color: $main-color;
 	margin-right: 10px;
 }
 
 blockquote {
-	border-left: 5px solid #db4a37;
+	border-left: 5px solid $main-color;
 	color: #777777;
 	margin-bottom: 30px;	
 	font-size: 24px;
@@ -179,11 +182,11 @@ blockquote cite {
 
 blockquote.right {
 	border-left: none;
-	border-right: 5px solid #db4a37;
+	border-right: 5px solid $main-color;
 }
 
 .dropcap-1 {
-	color: #db4a37;
+	color: $main-color;
 	font-size: 48px;
 	float: left;
 	line-height: 48px;
@@ -191,7 +194,7 @@ blockquote.right {
 }
 
 .dropcap-2 {
-	background: #db4a37;
+	background: $main-color;
 	color: white;
 	font-size: 48px;
 	float: left;
@@ -201,7 +204,7 @@ blockquote.right {
 }
 
 .colored {
-	color:#db4a37;
+	color:$main-color;
 }
 
 .margin {
@@ -333,7 +336,7 @@ ul.nav > li {
 
 #main-nav ul.nav li.current a,
 #main-nav ul.nav li a:hover {
-	color: #db4a37;
+	color: $main-color;
 }
 
 .navbar {
@@ -356,18 +359,18 @@ ul.nav > li {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-	border-color: #db4a37;
+	border-color: $main-color;
 	background-color: transparent;
 }
 
 .navbar-default .navbar-toggle:hover .icon-bar,
 .navbar-default .navbar-toggle:focus .icon-bar {
-	background-color: #db4a37;
+	background-color: $main-color;
 }
 
 #main-nav .navbar-nav>.dropdown>a:hover .caret {
-		border-top-color:#db4a37;
-		border-bottom-color:#db4a37;
+		border-top-color:$main-color;
+		border-bottom-color:$main-color;
 }
 
 #main-nav .navbar-nav > .dropdown li:before {
@@ -460,7 +463,7 @@ ul.nav > li {
 	font-size: 18px;
 	text-transform: none;
 	font-weight: 400;
-	color:#db4a37;
+	color:$main-color;
 }
 /*-------------------------------------------------------
 	Banner Styles
@@ -549,7 +552,7 @@ ul.nav > li {
 }
 
 .welcome-message span {
-	color: #db4a37;
+	color: $main-color;
 }
 
 .features {
@@ -561,7 +564,7 @@ ul.nav > li {
 }
 
 .feature .feature-icon {
-	color: #db4a37;
+	color: $main-color;
 	font-size: 48px;
 	text-align: center;
 	margin-bottom: 10px;
@@ -679,7 +682,7 @@ main h2 {
 }
 
 .event .buy-now:hover {
-	background: #db4a37;
+	background: $main-color;
 	text-decoration: none;
 }
 
@@ -709,7 +712,7 @@ main h2 {
 }
 
 .recent-post h3 a:hover {
-	color: #db4a37;
+	color: $main-color;
 	text-decoration: none;
 }
 
@@ -718,7 +721,7 @@ main h2 {
 }
 
 .recent-post .post-meta a:hover {
-	color: #db4a37;
+	color: $main-color;
 	text-decoration: none;
 }
 
@@ -746,7 +749,7 @@ main h2 {
 
 .read-more-icon {
 	font-size: 18px;
-	color:#db4a37;
+	color:$main-color;
 	margin-left: 5px;
 }
 
@@ -774,7 +777,7 @@ main h2 {
 	line-height: 30px;
 	width: 100px;
 	float: right;
-	background: #db4a37;
+	background: $main-color;
 	text-align: center;
 }
 
@@ -805,7 +808,7 @@ main h2 {
 .latest-content a:hover .latest-content-info,
 .latest-content a:hover .latest-content-info .icon,
 .latest-content a:hover .latest-content-info p {
-	background: #f04933;
+	background: $main-color;
 	color:white;
 }
 
@@ -937,7 +940,7 @@ h2 span.view a.current .fa {
 
 .pagination > li > a:hover,
 .pagination > li.current > a {
-	background: #db4a37;
+	background: $main-color;
 	color:white;
 }
 
@@ -1058,7 +1061,7 @@ h3.event-desc {
 }
 
 .event-info .action-buttons a:hover {
-	background: #db4a37;
+	background: $main-color;
 }
 
 ul.share {
@@ -1240,7 +1243,7 @@ ul.share a:hover  {
 }
 
 .songs li .track-nr {
-	background: #db4a37;
+	background: $main-color;
 	display: block;
 	height: 100%;
 	width: 60px;
@@ -1282,7 +1285,7 @@ ul.share a:hover  {
 }
 
 .songs li .track-btns li .download-track:hover {
-	background: #db4a37;
+	background: $main-color;
 	text-decoration: none;
 }
 
@@ -1391,7 +1394,7 @@ ul.share a:hover  {
 }
 
 .album-btns ul li a:hover {
-	background: #db4a37;
+	background: $main-color;
 	text-decoration: none;
 }
 
@@ -1449,7 +1452,7 @@ ul.share a:hover  {
 }
 
 .search-form .search-submit:hover {
-	background: #db4a37 image-url('search_hover.png') center center no-repeat;
+	background: $main-color image-url('search_hover.png') center center no-repeat;
 }
 
 .widget ul.nav {
@@ -1608,7 +1611,7 @@ ul.share a:hover  {
 }
 
 .post h3 a:hover {
-	color: #db4a37;
+	color: $main-color;
 	text-decoration: none;
 }
 
@@ -1627,7 +1630,7 @@ ul.share a:hover  {
 }
 
 .post .post-meta a:hover {
-	color: #db4a37;
+	color: $main-color;
 	text-decoration: none;
 }
 
@@ -1644,7 +1647,7 @@ ul.share a:hover  {
 .post-gallery .flex-control-nav {padding:0; width: 100%; position: absolute; bottom: 0px; text-align: right; z-index: 100; padding-right: 30px; }
 .post-gallery .flex-control-nav li {margin: 0 3px; display: inline-block; zoom: 1; *display: inline;}
 .post-gallery .flex-control-paging li a {width: 8px; height: 8px; display: block; background: #242424; cursor: pointer; text-indent: 9999px; border-radius: 2px; border:none; }
-.post-gallery .flex-control-paging li a:hover { background: #db4a37; }
+.post-gallery .flex-control-paging li a:hover { background: $main-color; }
 .post-gallery .flex-control-paging li a.flex-active { background: #f04933; cursor: default; }
 
 a.next, a.prev {
@@ -1667,14 +1670,14 @@ a.next {
 }
 
 a.next:hover, a.prev:hover {
-	background: #db4a37;
+	background: $main-color;
 	color:white;
 }
 
 .post blockquote {
 	font-style: italic;
-	border-left: 5px solid #db4a37;
-	color: #db4a37;
+	border-left: 5px solid $main-color;
+	color: $main-color;
 	margin-bottom: 30px;
 	font-size: 14px;
 }
@@ -1699,7 +1702,7 @@ a.next:hover, a.prev:hover {
 .author-info .avatar img {
 	max-width: 100%;
 	border-radius: 60px;
-	border: 5px solid #db4a37;
+	border: 5px solid $main-color;
 	box-shadow:0px 0px 2px #000;
 }
 
@@ -1746,7 +1749,7 @@ a.next:hover, a.prev:hover {
 
 #comments h3 .fa {
 	margin-right: 15px;
-	color: #db4a37;
+	color: $main-color;
 }
 
 .comments, .comments ul {
@@ -1789,7 +1792,7 @@ a.next:hover, a.prev:hover {
 
 .comments li .content h5 {
 	font-size: 16px;
-	color:#db4a37;
+	color:$main-color;
 }
 
 .comments li .content h5 span {
@@ -1864,7 +1867,7 @@ a.next:hover, a.prev:hover {
 }
 
 #leave-comment #submitcomment:hover {
-	background: #db4a37;
+	background: $main-color;
 }
 
 .grid-post {
@@ -1897,7 +1900,7 @@ a.next:hover, a.prev:hover {
 }
 
 .grid-post .tags a:hover {
-	color: #db4a37;
+	color: $main-color;
 	text-decoration: none;
 }
 
@@ -1938,7 +1941,7 @@ a.next:hover, a.prev:hover {
 
 .load-more {
 	height: 45px;
-	background: #db4a37;
+	background: $main-color;
 	border: none;
 	outline: none;
 	line-height: 45px;
@@ -1983,7 +1986,7 @@ a.next:hover, a.prev:hover {
 }
 
 #contact-form label span {
-	color: #db4a37;
+	color: $main-color;
 }
 
 #contact-form input[type="text"],
@@ -2020,7 +2023,7 @@ a.next:hover, a.prev:hover {
 }
 
 #contact-form #sendmessage:hover {
-	background: #db4a37;
+	background: $main-color;
 }
 
 .contact-details {
@@ -2029,7 +2032,7 @@ a.next:hover, a.prev:hover {
 }
 
 .contact-details .icon {
-	color: #db4a37;
+	color: $main-color;
 	text-align: center;
 	margin-bottom: 10px;
 }
@@ -2047,7 +2050,7 @@ a.next:hover, a.prev:hover {
 .result {
 	margin-left:30px;
 	text-align: right;
-	color: #db4a37;
+	color: $main-color;
 }
 
 #contact-map {
@@ -2101,7 +2104,7 @@ a.next:hover, a.prev:hover {
 	float:right;
 	height: 60px;
 	text-align: center;
-	background: #db4a37;
+	background: $main-color;
 	line-height: 60px;
 	padding: 0px 15px;
 	color: white;
@@ -2165,7 +2168,7 @@ a.next:hover, a.prev:hover {
 	float:right;
 	height: 40px;
 	text-align: center;
-	background: #db4a37;
+	background: $main-color;
 	line-height: 40px;
 	padding: 0px 25px;
 	color: white;
@@ -2414,9 +2417,9 @@ a.next:hover, a.prev:hover {
 }
 
 .btn-outline.btn-colored {
-	border:2px solid #db4a37;
+	border:2px solid $main-color;
 	border-radius: 4px;
-	color: #db4a37;
+	color: $main-color;
 	background: transparent;
 }
 
@@ -2443,12 +2446,12 @@ a.next:hover, a.prev:hover {
 
 .btn-colored {
 	color: white;
-	background: #f04933;
+	background: $main-color;
 }
 
 .btn-colored:hover {
 	color: white;
-	background: #db4a37;
+	background: $main-color;
 }
 
 .btn-colored:active {
@@ -2473,7 +2476,7 @@ a.next:hover, a.prev:hover {
 
 .panel-default > .panel-heading {
 	color: #333;
-	background-color: #f04933;
+	background-color: $main-color;
 	border:none;
 	border-radius: 3px;
 }
@@ -2795,7 +2798,7 @@ ul.links li a:hover {
 }
 
 .subscribe-form .submit:hover {
-	background: #db4a37;
+	background: $main-color;
 }
 
 .bottom-footer {
@@ -2809,7 +2812,7 @@ ul.links li a:hover {
 }
 
 .love .fa {
-	color: #f04933;
+	color: $main-color;
 	font-size:11px;
 	margin-right: 3px;
 }

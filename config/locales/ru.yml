@@ -1,0 +1,8 @@
+ru:
+  register: Зарегистрироваться
+  login: Войти
+  logout: Выйти
+  forgot_password: Забыли пароль?
+  main: Главная
+  videos:
+    page_title: Видео

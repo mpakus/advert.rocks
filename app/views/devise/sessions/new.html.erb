@@ -1,0 +1,28 @@
+<% content_for :page_title, t('devise.login') %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-horizontal form-centered'}) do |f| %>
+  <div class="form-group">
+    <%= f.label :email, t('devise.email') %>
+    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password, t('devise.password') %><br />
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="form-group">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me, t('devise.remember_me') %>
+    </div>
+  <% end -%>
+
+  <div class="form-group">
+    <%= f.submit t('devise.login'), class: 'btn btn-colored' %>
+  </div>
+
+  <%= render "devise/shared/links" %>
+
+<% end %>
+
