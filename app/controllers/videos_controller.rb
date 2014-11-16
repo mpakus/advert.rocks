@@ -1,10 +1,11 @@
 class VideosController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_video, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
-    @videos = Video.all
+    @videos = Video.page(params[:page]).per(32)
     respond_with(@videos)
   end
 
@@ -21,7 +22,7 @@ class VideosController < ApplicationController
   end
 
   def create
-    @video = Video.new(video_params)
+    @video = current_user.videos.create(VideoManager.get_info(params[:video][:url]))
     @video.save
     respond_with(@video)
   end

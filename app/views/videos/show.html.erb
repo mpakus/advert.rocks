@@ -1,9 +1,3 @@
-<p id="notice"><%= notice %></p>
+<%= content_for :page_title, t('videos.page_title') + @video.title %>
 
-<p>
-  <strong>Url:</strong>
-  <%= @video.url %>
-</p>
-
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+<%= @video.embed_code.html_safe %>

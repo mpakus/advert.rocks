@@ -47,7 +47,7 @@ a {
 }
 
 a:hover {
-	color:#f04933;
+	color:$main-color;
 	text-decoration: none;
 }
 
@@ -611,7 +611,7 @@ main h2 {
 	position: absolute;
 	left:0;
 	bottom: 0;
-	background: #f04933;
+	background: $main-color;
 	color:white;
 	padding: 7px 8px 9px;
 	text-align: center;
@@ -644,7 +644,7 @@ main h2 {
 }
 
 .event h3 a:hover {
-	color: #f04933;
+	color: $main-color;
 }
 
 .event p {
@@ -669,7 +669,7 @@ main h2 {
 	width: 100px;
 	line-height: 30px;
 	color: white;
-	background: #f04933;
+	background: $main-color;
 	text-align: center;
 }
 
@@ -754,7 +754,7 @@ main h2 {
 }
 
 .read-more:hover {
-	color: #f04933;
+	color: $main-color;
 	text-decoration: none;
 }
 
@@ -792,7 +792,7 @@ main h2 {
 }
 
 .view-all:hover {
-	background: #f04933;
+	background: $main-color;
 	color:white;
 	text-decoration: none;
 }
@@ -835,6 +835,7 @@ main h2 {
 
 .latest-content .latest-content-info .meta {
 	padding: 0px;
+  overflow: hidden;
 }
 
 .latest-content .latest-content-info .meta h4 {
@@ -913,7 +914,7 @@ h2 span.view a {
 
 h2 span.view a:hover .fa,
 h2 span.view a.current .fa {
-	color:#f04933;
+	color:$main-color;
 }
 
 .pagination {
@@ -964,7 +965,7 @@ h2 span.view a.current .fa {
 	left:55%;
 	height: 45%;
 	width: 25%;
-	background: #f04933;
+	background: $main-color;
 	color:white;
 	line-height: 38px;
 	padding: 50px 30px;
@@ -982,8 +983,8 @@ h2 span.view a.current .fa {
 	height: 0; 
 	border-bottom: 13px solid transparent;
 	border-left: 13px solid transparent;
-	border-right: 13px solid #f04933;
-	border-top: 13px solid #f04933;
+	border-right: 13px solid $main-color;
+	border-top: 13px solid $main-color;
 }
 
 .event-gallery {
@@ -995,7 +996,7 @@ h2 span.view a.current .fa {
 
 .flex-direction-nav {*height: 0; z-index:9; list-style: none; position: absolute; left:30px; bottom: 25px; padding:0;}
 .flex-direction-nav a  { background: #1e1e1e; color:#777777; display: block; text-align: center; line-height:40px; width: 40px; height: 40px; z-index: 10; overflow: hidden; opacity: 1; }
-.flex-direction-nav a:hover  { background: #f04933; color:white; }
+.flex-direction-nav a:hover  { background: $main-color; color:white; }
 .flex-direction-nav li { float:left; margin-right: 5px; }
 .flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
 
@@ -1048,7 +1049,7 @@ h3.event-desc {
 	width: 130px;
 	line-height: 50px;
 	color: white;
-	background: #f04933;
+	background: $main-color;
 	text-align: center;
 	margin-right: 20px;
 	margin-bottom: 20px;
@@ -1087,7 +1088,7 @@ ul.share a  {
 }
 
 ul.share a:hover  { 
-	background: #f04933; 
+	background: $main-color; 
 	color:white;
 }
 
@@ -1135,7 +1136,7 @@ ul.share a:hover  {
 	height: 40px;
 	font-size: 16px;
 	color: white;
-	background: #f04933;
+	background: $main-color;
 	left:0;
 	padding: 0 20px;
 }
@@ -1182,7 +1183,7 @@ ul.share a:hover  {
 
 .isotope-filters li a:hover,
 .isotope-filters li.current a {
-	color: #f04933;
+	color: $main-color;
 }
 
 .artist-info {
@@ -1276,7 +1277,7 @@ ul.share a:hover  {
 	line-height: 24px;
 	font-size: 12px;
 	color: white;
-	background: #f04933;
+	background: $main-color;
 	text-align: center;
 }
 
@@ -1388,7 +1389,7 @@ ul.share a:hover  {
 	line-height: 30px;
 	font-size: 14px;
 	color: white;
-	background: #f04933;
+	background: $main-color;
 	text-align: center;
 	margin-right: 15px;
 }
@@ -1440,7 +1441,7 @@ ul.share a:hover  {
 	float: left;
 	height: 50px;
 	width: 50px;
-	background: #f04933;
+	background: $main-color;
 	border: none;
 	outline: none;
 	line-height: 24px;
@@ -1476,7 +1477,7 @@ ul.share a:hover  {
 }
 
 .widget ul.nav li a:hover {
-	color:#f04933;
+	color:$main-color;
 	background: transparent;
 }
 
@@ -1516,7 +1517,7 @@ ul.share a:hover  {
 .widget .tabs li a:hover,
 .widget .tabs li.active a {
     color:white;
-    background:#f04933
+    background:$main-color
 }
 
 .widget .tab-content .tab-pane {
@@ -1577,7 +1578,7 @@ ul.share a:hover  {
 
 .widget ul.tags li a:hover {
     color:white;
-    background:#f04933;
+    background:$main-color;
 }
 
 .post {
@@ -1648,7 +1649,7 @@ ul.share a:hover  {
 .post-gallery .flex-control-nav li {margin: 0 3px; display: inline-block; zoom: 1; *display: inline;}
 .post-gallery .flex-control-paging li a {width: 8px; height: 8px; display: block; background: #242424; cursor: pointer; text-indent: 9999px; border-radius: 2px; border:none; }
 .post-gallery .flex-control-paging li a:hover { background: $main-color; }
-.post-gallery .flex-control-paging li a.flex-active { background: #f04933; cursor: default; }
+.post-gallery .flex-control-paging li a.flex-active { background: $main-color; cursor: default; }
 
 a.next, a.prev {
 	margin: 0px 0px;
@@ -1813,7 +1814,7 @@ a.next:hover, a.prev:hover {
 }
 
 .reply:hover {
-	color: #f04933;
+	color: $main-color;
 	text-decoration: none;
 }
 
@@ -1856,7 +1857,7 @@ a.next:hover, a.prev:hover {
 #leave-comment #submitcomment {
 	float: left;
 	height: 45px;
-	background: #f04933;
+	background: $main-color;
 	border: none;
 	outline: none;
 	line-height: 24px;
@@ -1922,7 +1923,7 @@ a.next:hover, a.prev:hover {
 	font-weight: 200;
 	font-style: normal;
 	margin-bottom: 0px;
-	background: #f04933 image-url('quote.png') no-repeat bottom 50px right 40px;
+	background: $main-color image-url('quote.png') no-repeat bottom 50px right 40px;
 }
 
 .grid-post blockquote cite {
@@ -1956,7 +1957,7 @@ a.next:hover, a.prev:hover {
 }
 
 .load-more:hover {
-	background: #f04933;
+	background: $main-color;
 	color:white;
 }
 
@@ -2012,7 +2013,7 @@ a.next:hover, a.prev:hover {
 #contact-form #sendmessage {
 	float: left;
 	height: 45px;
-	background: #f04933;
+	background: $main-color;
 	border: none;
 	outline: none;
 	line-height: 24px;
@@ -2115,7 +2116,7 @@ a.next:hover, a.prev:hover {
 }
 
 .call-to-action .cta-button:hover {
-	background: #f04933;
+	background: $main-color;
 }
 
 /*-------------------------------------------------------
@@ -2124,7 +2125,7 @@ a.next:hover, a.prev:hover {
 
 .error-404 h1 {
 	font-size: 300px;
-	color: #f04933;
+	color: $main-color;
 	text-align: center;
 	background: image-url('bg-404.png') bottom center no-repeat;
 	padding-bottom: 50px;
@@ -2179,11 +2180,11 @@ a.next:hover, a.prev:hover {
 }
 
 .event-countdown .register:hover {
-	background: #f04933;
+	background: $main-color;
 }
 
 .event-countdown h1 {
-	color: #f04933;
+	color: $main-color;
 	font-size: 150px;
 	text-align: center;
 	margin-top: 0px;
@@ -2424,8 +2425,8 @@ a.next:hover, a.prev:hover {
 }
 
 .btn-outline.btn-colored:hover {
-	border:2px solid #f04933;
-	color: #f04933;
+	border:2px solid $main-color;
+	color: $main-color;
 	background: transparent;
 }
 
@@ -2522,7 +2523,7 @@ ul.nav-tabs > li {
 }
 
 ul.nav-tabs > li > a {
-	background: #f04933;
+	background: $main-color;
 	color: white;
 	padding: 8px 35px;
 	border-radius: 3px 3px 0 0;
@@ -2554,8 +2555,8 @@ ul.nav-tabs.outline-nav-tabs > li > a {
 ul.nav-tabs.outline-nav-tabs > li > a:hover,
 ul.nav-tabs.outline-nav-tabs > li.active > a:hover,
 ul.nav-tabs.outline-nav-tabs > li.active > a {
-	background: #f04933;
-	border-color: #f04933;
+	background: $main-color;
+	border-color: $main-color;
 	color: white;
 }
 
@@ -2566,7 +2567,7 @@ ul.nav-tabs.outline-nav-tabs > li.active > a {
     }
 
     ul.nav-tabs.outline-nav-tabs > li {
-        border-top:1px solid #f04933;
+        border-top:1px solid $main-color;
     }
 
     ul.nav-tabs > li > a,
@@ -2579,8 +2580,8 @@ ul.nav-tabs.outline-nav-tabs > li.active > a {
 	background: transparent;
 	border-radius: 0px;
 	padding: 30px 30px 5px;
-	border-top: 1px solid #f04933;
-	border-bottom: 1px solid #f04933;
+	border-top: 1px solid $main-color;
+	border-bottom: 1px solid $main-color;
 }
 
 .tab-content {
@@ -2643,8 +2644,8 @@ button.close {
 .pagination-style-1 .next:hover,
 .pagination-style-1 .pagination li a:hover,
 .pagination-style-1 .pagination li.current a {
-	border:2px solid #f04933;
-	color: #f04933;
+	border:2px solid $main-color;
+	color: $main-color;
 	background: transparent;
 }
 
@@ -2660,13 +2661,13 @@ button.close {
 .pagination-style-2 .pagination li a:hover,
 .pagination-style-2 .pagination li.current a {
 	color: white;
-	background: #f04933;
+	background: $main-color;
 }
 
 .pagination-style-3 .prev,
 .pagination-style-3 .next,
 .pagination-style-3 .pagination li a {
-	background: #f04933;
+	background: $main-color;
 	color: white;
 }
 
@@ -2703,7 +2704,7 @@ footer {
 }
 
 .gototop a:hover {
-	color:#f04933;
+	color:$main-color;
 }
 
 footer p {
@@ -2759,7 +2760,7 @@ ul.links li a {
 }
 
 ul.links li a:hover {
-	color:#f04933;
+	color:$main-color;
 }
 
 .links-col:last-child {
@@ -2787,7 +2788,7 @@ ul.links li a:hover {
 	float: left;
 	height: 40px;
 	width: 75px;
-	background: #f04933;
+	background: $main-color;
 	border: none;
 	outline: none;
 	line-height: 24px;
@@ -2842,7 +2843,6 @@ ul.social li a {
 }
 
 ul.social li a:hover {
-	background: #f04933;
+	background: $main-color;
 	color: white;
 }
-

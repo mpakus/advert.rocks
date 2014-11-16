@@ -1,4 +1,6 @@
-$nprogress-color: #F8371A;
+@import "vars";
+
+$nprogress-color: $main-color;
 @import 'nprogress';
 @import 'nprogress-bootstrap';
 #nprogress .bar { height: 4px !important; }

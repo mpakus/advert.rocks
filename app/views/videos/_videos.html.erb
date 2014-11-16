@@ -1,0 +1,22 @@
+<% videos.each do |video| %>
+  <div class="col-sm-6 col-md-3 video tv">
+    <div class="latest-content">
+      <a href="<%= video_path(video) %>" class="video-link">
+        <div class="latest-content-image">
+          <%= image_tag video.image.url(:thumb) %>
+        </div>
+        <div class="latest-content-info">
+
+          <div class="meta">
+            <div class="icon">
+              <i class="fa fa-video-camera"></i>
+            </div>
+            <h4><%= video.title[0..19] %>&hellip;</h4>
+            <p>@<%= video.user.human_name %></p>
+          </div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+<% end %>
