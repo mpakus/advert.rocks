@@ -23,9 +23,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -51,6 +48,8 @@ gem 'autoprefixer-rails' # css prefixer
 gem 'acts-as-taggable-on' # tags for Post
 gem 'metamagic' # meta keywords and description
 gem 'nprogress-rails'
+gem 'video_info'
+gem 'annotate'
 
 group :development do
   # gem 'mina'
@@ -68,8 +67,10 @@ group :production do
 end
 
 group :test, :development do
+  gem 'spring'
   gem "rspec-rails", "~> 3.0"
   gem "factory_girl_rails", "~> 4.0"
+  gem 'guard-rspec'
   gem "faker"
   gem "capybara"
   # gem 'capybara-screenshot'
