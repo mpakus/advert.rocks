@@ -32,3 +32,5 @@ config/deploy.rb
 *.bowerrc
 bower.json
 /.idea
+
+/public/uploads
