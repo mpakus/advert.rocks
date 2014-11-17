@@ -1,4 +1,4 @@
-<%= content_for :page_title, t('videos.page_title') + @video.title %>
+<%= content_for :page_title, t('videos.page_title') + ' - ' + @video.title %>
 
 <div class="col-lg-12">
   <%= @video.embed_code.html_safe %>
