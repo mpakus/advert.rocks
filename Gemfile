@@ -60,6 +60,7 @@ group :development do
   gem 'sextant'
   gem 'quiet_assets'
   gem 'bullet'
+  gem "rvm-capistrano"
 end
 
 group :production do
