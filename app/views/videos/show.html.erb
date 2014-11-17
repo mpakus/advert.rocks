@@ -7,7 +7,7 @@
 
   <div class="author-info">
     <div class="avatar">
-      <%= image_tag Gravatar.new(@video.user.email).image_url %>
+      <%= image_tag gravatar_url(@video.user.email) %>
     </div>
     <div class="bio">
       <h5><%= @video.user.human_name %> <span>Author</span></h5>

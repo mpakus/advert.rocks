@@ -1,4 +1,9 @@
 module VideosHelper
+
+  def gravatar_url(email)
+    Gravatar.new(email).image_url
+  end
+
   def emojify(msg)
     msg.gsub(/\B:[-+\w]+:/, &method(:replace))
   end

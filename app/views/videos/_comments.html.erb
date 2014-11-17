@@ -7,7 +7,7 @@
         <li>
           <a name="com<%= comment.id %>"></a>
           <div class="avatar">
-            <%= image_tag Gravatar.new(comment.user_email).image_url %>
+            <%= image_tag gravatar_url(comment.user_email) %>
           </div>
           <div class="content">
             <h5><%= comment.human_name %> <span><%= comment.human_created_at %></span></h5>
