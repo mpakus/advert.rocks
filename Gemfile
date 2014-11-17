@@ -51,6 +51,7 @@ gem 'nprogress-rails'
 gem 'video_info'
 gem 'annotate'
 gem 'font-awesome-sass'
+gem 'gravatar-ultimate'
 
 group :development do
   # gem 'mina'

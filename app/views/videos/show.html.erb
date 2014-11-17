@@ -1,3 +1,19 @@
 <%= content_for :page_title, t('videos.page_title') + @video.title %>
 
-<%= @video.embed_code.html_safe %>
+<div class="col-lg-12">
+  <%= @video.embed_code.html_safe %>
+
+  <br/>
+
+  <div class="author-info">
+    <div class="avatar">
+      <%= image_tag Gravatar.new(@video.user.email).image_url %>
+    </div>
+    <div class="bio">
+      <h5><%= @video.user.human_name %> <span>Author</span></h5>
+    </div>
+  </div>
+
+  <%= render 'comments' %>
+
+</div>

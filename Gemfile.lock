@@ -103,6 +103,9 @@ GEM
     font-awesome-sass (4.2.2)
       sass (~> 3.2)
     formatador (0.2.5)
+    gravatar-ultimate (2.0.0)
+      activesupport (>= 2.3.14)
+      rack
     guard (2.8.2)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -282,6 +285,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.0)
   faker
   font-awesome-sass
+  gravatar-ultimate
   guard-rspec
   jbuilder (~> 2.0)
   jquery-rails

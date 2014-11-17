@@ -7,10 +7,10 @@
         <li class="add-video"><a href="<%= new_video_path %>"><i class="glyphicon glyphicon-plus"></i> <span><%= t('videos.new') %></span></a></li>
         <li class="user-name"><i class="fa fa-lock"></i> <span><%= current_user.email %></span></li>
         <li class="logout"><%= link_to destroy_user_session_path, method: :delete do %><i class="fa fa-user"></i> <span><%= t('logout') %></span><% end %></li>
-        <li class="forgot-password"><a href="<%= new_user_password_path %>"><i class="fa fa-user"></i> <span><%= t('forgot_password') %></span></a></li>
       <% else %>
         <li class="login"><a href="<%= new_user_session_path %>"><i class="fa fa-lock"></i> <span><%= t('login') %></span></a></li>
         <li class="register"><a href="<%= new_user_registration_path %>"><i class="fa fa-user"></i> <span><%= t('register') %></span></a></li>
+        <li class="forgot-password"><a href="<%= new_user_password_path %>"><i class="fa fa-user"></i> <span><%= t('forgot_password') %></span></a></li>
       <% end %>
       <li class="facebook"><a href="#"></a></li>
       <li class="twitter"><a href="#"></a></li>

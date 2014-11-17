@@ -1844,6 +1844,19 @@ a.next:hover, a.prev:hover {
 	color: #777777;
 }
 
+.form-input {
+  display: block;
+  background: #2a2a2a;
+  border:1px solid #3e3e3e;
+  width: 100%;
+  height: 50px;
+  line-height: 30px;
+  margin-bottom: 25px;
+  padding: 10px;
+  outline: none;
+  color: #777777;
+}
+
 #leave-comment input:required {
 	background: #2a2a2a image-url('required.png') no-repeat top right;
 }

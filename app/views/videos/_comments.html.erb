@@ -1,0 +1,36 @@
+<div id="comments">
+  <h3><i class="fa fa-lg fa-comments"></i> <%= @video.comments.count %> <%= t('comments', count: @video.comments.count) %></h3>
+
+  <ul class="comments">
+    <% cache @video do %>
+      <% @video.comments.ordered.each do |comment| %>
+        <li>
+          <a name="com<%= comment.id %>"></a>
+          <div class="avatar">
+            <%= image_tag Gravatar.new(comment.user_email).image_url %>
+          </div>
+          <div class="content">
+            <h5><%= comment.human_name %> <span><%= comment.human_created_at %></span></h5>
+            <%= simple_format comment.message %>
+            <!--<a href="#" class="reply">Reply <i class="fa fa-share"></i></a>-->
+          </div>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<div id="leave-comment">
+  <h2><%= t('leave_comment').html_safe %></h2>
+  <%= form_tag video_comments_path(@video) do |f| %>
+    <% unless user_signed_in? %>
+      <label for="name"><%= t('your_name') %></label>
+      <input type="text" name="name" id="name" value="" required="">
+      <label for="email"><%= t('your_email') %></label>
+      <input type="email" name="email" id="email" value="" required="">
+    <% end %>
+    <label for="message"><%= t('message') %></label>
+    <textarea name="message" id="message" required=""></textarea>
+    <input type="submit" name="submitcomment" id="submitcomment" value="<%= t('submit_comment') %>">
+  <% end %>
+</div>
