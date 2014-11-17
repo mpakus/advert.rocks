@@ -52,6 +52,7 @@ gem 'video_info'
 gem 'annotate'
 gem 'font-awesome-sass'
 gem 'gravatar-ultimate'
+gem 'emoji'
 
 group :development do
   # gem 'mina'

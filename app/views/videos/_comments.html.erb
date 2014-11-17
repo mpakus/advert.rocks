@@ -11,8 +11,7 @@
           </div>
           <div class="content">
             <h5><%= comment.human_name %> <span><%= comment.human_created_at %></span></h5>
-            <%= simple_format comment.message %>
-            <!--<a href="#" class="reply">Reply <i class="fa fa-share"></i></a>-->
+            <%= simple_format(emojify comment.message) %>
           </div>
         </li>
       <% end %>
