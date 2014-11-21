@@ -2,3 +2,4 @@ ru:
   videos:
     new: Добавить видео
     url: "URL видео (например: https://www.youtube.com/watch?v=9bZkp7q19f0)"
+    created: Видео успешно добавлено

@@ -24,7 +24,9 @@
 
 FactoryGirl.define do
   factory :user do
-    email    { Faker::Internet.free_email }
+    sequence :email do |n|
+      "#{n}-#{Faker::Internet.free_email}"
+    end
     password { Faker::Internet.password(8) }
     confirmed_at { Time.now }
   end

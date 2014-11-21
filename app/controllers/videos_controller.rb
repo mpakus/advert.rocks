@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_video, only: [:show]
 
   respond_to :html
 
@@ -19,12 +19,16 @@ class VideosController < ApplicationController
   end
 
   def create
-    @video = current_user.videos.create(VideoManager.get_info(params[:video][:url]))
-    @video.save
-    respond_with(@video)
+    if @video = current_user.videos.create!(VideoManager.get_info(params[:video][:url]))
+      redirect_to video_path(@video), notice: t('videos.created')
+    end
+  rescue => e
+    @video = Video.new.errors.add(:url, e.message)
+    render :new
   end
 
-  # @todo
+#=============>>> @todo
+
   # def edit
   # end
 
@@ -43,7 +47,7 @@ class VideosController < ApplicationController
       @video = Video.find(params[:id])
     end
 
-    def video_params
-      params.require(:video).permit(:url)
-    end
+    # def video_params
+    #   params.require(:video).permit(:url)
+    # end
 end

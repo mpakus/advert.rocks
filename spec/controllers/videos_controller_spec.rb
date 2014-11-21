@@ -85,16 +85,23 @@ RSpec.describe VideosController, :type => :controller do
       end
 
       it "is create a new video" do
-        VCR.use_cassette('youtube_video') do
+        VCR.use_cassette('youtube_video_with_image') do
           expect{post :create, video: attributes_for(:video)}.to change(Video, :count).by(1)
         end
       end
 
       it "redirects to #show page after creating a new video" do
-        VCR.use_cassette('youtube_video') do
+        VCR.use_cassette('youtube_video_with_image') do
           post :create, video: attributes_for(:video)
         end
         expect(response).to redirect_to video_path(assigns[:video])
+      end
+
+      it "fail with validation error when url is empty" do
+        VCR.use_cassette('youtube_video_with_image') do
+          post :create, video: {url: ''}
+        end
+        expect(response).to render_template :new
       end
     end
   end

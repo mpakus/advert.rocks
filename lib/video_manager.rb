@@ -14,6 +14,7 @@ class VideoManager
     # video.embed_code
     video = VideoInfo.new(url)
     {
+      url:         url,
       title:       video.title,
       description: video.description,
       uploaded_on: video.date,
