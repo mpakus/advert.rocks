@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.7'
+gem 'rails', '4.1.8'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 # Use SCSS for stylesheets
@@ -63,6 +63,9 @@ group :development do
   gem 'quiet_assets'
   gem 'bullet'
   gem "rvm-capistrano"
+
+  gem 'guard-rspec'
+  gem 'terminal-notifier-guard'
 end
 
 group :production do
@@ -71,12 +74,16 @@ group :production do
 end
 
 group :test, :development do
-  gem 'spring'
+  gem 'spring-commands-rspec', '~> 1.0.2'
   gem "rspec-rails", "~> 3.0"
   gem "factory_girl_rails", "~> 4.0"
-  gem 'guard-rspec'
   gem "faker"
   gem "capybara"
   # gem 'capybara-screenshot'
   gem "database_cleaner"
+  gem 'vcr', '~> 2.9.3'
+end
+
+group :test do
+  gem 'webmock', '~> 1.20.4'
 end

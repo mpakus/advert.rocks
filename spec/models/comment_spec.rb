@@ -15,5 +15,22 @@
 require 'rails_helper'
 
 RSpec.describe Comment, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "is comment message empty" do
+    comment = build(:comment, message: nil)
+    comment.valid?
+    expect(comment.errors[:message]).to include("can't be blank")
+  end
+
+  it "is user blank or email & name" do
+    comment = build(:comment, user: nil, email: nil, name: nil)
+    comment.valid?
+    expect(comment.errors[:email]).to include("can't be blank")
+    expect(comment.errors[:name]).to  include("can't be blank")
+  end
+
+  it "is video empty" do
+    comment = build(:comment, video: nil)
+    comment.valid?
+    expect(comment.errors[:video]).to include("can't be blank")
+  end
 end

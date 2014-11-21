@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://vimeo.com/api/v2/video/112314245.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - VideoInfo/2.3.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Ratelimit-Limit:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '3599'
+      X-Ratelimit-Reset:
+      - '1416571494'
+      Expires:
+      - Fri, 21 Nov 2014 11:05:54 GMT
+      Last-Modified:
+      - Fri, 21 Nov 2014 11:00:27 GMT
+      Etag:
+      - '"a7d3aec130f16188065da70071ab3e18"'
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1038'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 21 Nov 2014 11:04:54 GMT
+      X-Varnish:
+      - '1702657767'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish
+      X-Varnish-Cache:
+      - '0'
+      Connection:
+      - close
+      X-Vserver:
+      - dfvimeowebproxy2
+    body:
+      encoding: UTF-8
+      string: '[{"id":112314245,"title":"Celluloid","description":"Artjail teamed
+        up with acclaimed video artist Marco Brambilla to create this short film that
+        was acquired by Vera Wang and is currently installed in her flagship Beverly
+        Hills store. The installation is an impressive 8 panel wall mounted version
+        that plays as an offset reel of film.<br \/>\n<br \/>\nThe film was originally
+        shot on Red Camera then effected in Autodesk Flame. We created transitions
+        stitching multiple takes into one seamless clip and digitally hand painted
+        degradation techniques to the footage. Out of the Flame the footage was scanned
+        to 35mm motion picture film, where it was further degraded in multiple passes
+        using bleach and other photo chemical processes. Those results were then loaded
+        back into the flame where we used elements of the multiple degraded film prints
+        to create more specific degradation. The silhouettes and other visual cues
+        were also something handled in Flame.<br \/>\n<br \/>\nDirector: Marco Brambilla<br
+        \/>\nVFX: Artjail<br \/>\nCreative Director \/ Lead Flame: Steve Mottershead<br
+        \/>\nFlame \/ Editor: Beau Dickson<br \/>\nFlame Assist: Ben Vaccaro<br \/>\nMusic:
+        Nicolas Jaar","url":"http:\/\/vimeo.com\/112314245","upload_date":"2014-11-19
+        14:32:46","mobile_url":"http:\/\/vimeo.com\/m\/112314245","thumbnail_small":"http:\/\/i.vimeocdn.com\/video\/497244225_100x75.jpg","thumbnail_medium":"http:\/\/i.vimeocdn.com\/video\/497244225_200x150.jpg","thumbnail_large":"http:\/\/i.vimeocdn.com\/video\/497244225_640.jpg","user_id":4438428,"user_name":"ARTJAIL","user_url":"http:\/\/vimeo.com\/user4438428","user_portrait_small":"http:\/\/i.vimeocdn.com\/portrait\/6288493_30x30.jpg","user_portrait_medium":"http:\/\/i.vimeocdn.com\/portrait\/6288493_75x75.jpg","user_portrait_large":"http:\/\/i.vimeocdn.com\/portrait\/6288493_100x100.jpg","user_portrait_huge":"http:\/\/i.vimeocdn.com\/portrait\/6288493_300x300.jpg","stats_number_of_likes":703,"stats_number_of_plays":25112,"stats_number_of_comments":18,"duration":152,"width":1280,"height":720,"tags":"vfx,
+        film, 35mm, mograph, motion graphics, tone, black and white, art, video art,
+        cinematography, red camera","embed_privacy":"anywhere"}]'
+    http_version: 
+  recorded_at: Fri, 21 Nov 2014 11:04:54 GMT
+recorded_with: VCR 2.9.3

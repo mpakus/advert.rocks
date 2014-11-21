@@ -14,11 +14,8 @@
 
 FactoryGirl.define do
   factory :comment do
-    message "MyText"
-user nil
-video nil
-name "MyString"
-email "MyString"
+    message Faker::Lorem.sentence(7)
+    user
+    video
   end
-
 end

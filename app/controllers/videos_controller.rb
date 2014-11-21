@@ -18,24 +18,25 @@ class VideosController < ApplicationController
     respond_with(@video)
   end
 
-  def edit
-  end
-
   def create
     @video = current_user.videos.create(VideoManager.get_info(params[:video][:url]))
     @video.save
     respond_with(@video)
   end
 
-  def update
-    @video.update(video_params)
-    respond_with(@video)
-  end
+  # @todo
+  # def edit
+  # end
 
-  def destroy
-    @video.destroy
-    respond_with(@video)
-  end
+  # def update
+  #   @video.update(video_params)
+  #   respond_with(@video)
+  # end
+  #
+  # def destroy
+  #   @video.destroy
+  #   respond_with(@video)
+  # end
 
   private
     def set_video

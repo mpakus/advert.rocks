@@ -19,6 +19,8 @@ class Comment < ActiveRecord::Base
   belongs_to :video, touch: true
 
   validates_presence_of :message
+  validates_presence_of :video
+  validates_presence_of :email, :name, if: 'user.nil?'
 
   def user_email
     self.user.nil? ? self.email : self.user.email

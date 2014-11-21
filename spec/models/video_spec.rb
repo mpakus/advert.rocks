@@ -20,5 +20,15 @@
 require 'rails_helper'
 
 RSpec.describe Video, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "is video url empty" do
+    video = build(:video, url: nil)
+    video.valid?
+    expect(video.errors[:url]).to include("can't be blank")
+  end
+
+  it "is user blank or email & name" do
+    video = build(:video, user: nil)
+    video.valid?
+    expect(video.errors[:user]).to include("can't be blank")
+  end
 end

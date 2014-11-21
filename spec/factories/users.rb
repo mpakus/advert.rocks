@@ -24,7 +24,15 @@
 
 FactoryGirl.define do
   factory :user do
-    
+    email    { Faker::Internet.free_email }
+    password { Faker::Internet.password(8) }
+    confirmed_at { Time.now }
   end
-
+  # factory :user_admin, parent: :user do
+  #   role     'admin'
+  # end
+  #
+  # factory :user_manager, parent: :user do
+  #   role     'manager'
+  # end
 end

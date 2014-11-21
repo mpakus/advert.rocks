@@ -24,6 +24,31 @@
 
 require 'rails_helper'
 
+
 RSpec.describe User, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "is user email empty" do
+    user = build(:user, email: nil)
+    user.valid?
+    expect(user.errors[:email]).to include("can't be blank")
+  end
+
+  it "is user password empty" do
+    user = build(:user, password: nil)
+    user.valid?
+    expect(user.errors[:password]).to include("can't be blank")
+  end
+
+  it "is email uniq for user" do
+    attrs = attributes_for(:user)
+    User.create(attrs)
+    user  = User.new(attrs)
+    user.valid?
+    expect(user.errors[:email]).to include("has already been taken")
+  end
+
+  it "is password length too short" do
+    user = build(:user, password: '12')
+    user.valid?
+    expect(user.errors[:password]).to include("is too short (minimum is 4 characters)")
+  end
 end

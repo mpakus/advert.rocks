@@ -1,15 +1,17 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the VideosHelper. For example:
-#
-# describe VideosHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe VideosHelper, :type => :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "gravatar_url" do
+    it "return correct image url" do
+      VCR.use_cassette('info_aomega_gravatar') do
+        expect(helper.gravatar_url('info@aomega.co')).to eq "http://www.gravatar.com/avatar/16f6bba9185ed4c27742821e2dba689a"
+      end
+    end
+  end
+
+  context "emojify" do
+    it "transform text with :heart: to image" do
+      expect(helper.emojify("Made with :heart:")).to eq "Made with <img alt=\":heart:\" class=\"emoji\" height=\"32\" src=\"http://localhost:3000/assets/emoji/heart.png\" title=\"heart\" width=\"32\" />"
+    end
+  end
 end
