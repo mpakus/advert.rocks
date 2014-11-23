@@ -23,7 +23,8 @@ class VideosController < ApplicationController
       redirect_to video_path(@video), notice: t('videos.created')
     end
   rescue => e
-    @video = Video.new.errors.add(:url, e.message)
+    @video = Video.new
+    @video.errors.add(:url, e.message)
     render :new
   end
 

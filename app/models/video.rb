@@ -19,8 +19,20 @@
 class Video < ActiveRecord::Base
   include Sortable
   mount_uploader :image, VideoUploader
+
   belongs_to :user
   has_many   :comments
+  has_many   :favorites
+  has_many   :favorite_users, through: :favorites, source: :user
 
   validates_presence_of :user, :url
+
+  after_save :add_to_favorite_user
+
+  private
+
+  def add_to_favorite_user
+    favorite_users << self.user
+  end
+
 end

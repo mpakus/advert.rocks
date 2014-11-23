@@ -23,13 +23,13 @@
 #
 
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :lockable, :timeoutable and :omniauthable
   devise :confirmable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :videos
   has_many :comments
+  has_many :favorites
+  has_many :favorite_videos, through: :favorites, source: :video
 
   def human_name
     self.name.nil? ? self.email : self.name

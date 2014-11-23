@@ -17,7 +17,7 @@ class VideoManager
       url:         url,
       title:       video.title,
       description: video.description,
-      uploaded_on: video.date,
+      uploaded_on: video.provider != 'Vkontakte' ? nil : video.date,
       duration:    video.duration,
       embed_url:   video.embed_url,
       embed_code:  video.embed_code({iframe_attributes: {class: 'video-show', width: 800, height: 600}}),
