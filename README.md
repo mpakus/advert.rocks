@@ -3,6 +3,10 @@ advert.rocks
 
 advert.rocks - top funny and scary adverts community blog
 
+v 0.4
++ video tiles with isotope on main page
++ infinity scroller without pagination
+
 v. 0.3
 + Rails updated to 4.1.8 (dancing on the edge ;)
 + specs + guard
