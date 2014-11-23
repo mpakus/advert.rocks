@@ -5,8 +5,8 @@ class VideosController < ApplicationController
   respond_to :html
 
   def index
-    @videos = Video.includes(:user).ordered.page(params[:page]).per(32)
-    respond_with(@videos)
+    @videos = Video.includes(:user).ordered.page(params[:page]).per(6)
+    render partial: 'videos', locals: {videos: @videos} if params[:iscroll].present?
   end
 
   def show

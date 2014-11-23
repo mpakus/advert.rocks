@@ -20,3 +20,7 @@
     </div>
   </div>
 <% end %>
+
+<nav id="page_nav">
+  <%= link_to '', videos_path(iscroll: 1, page: params[:page].to_i+1) %>
+</nav>
