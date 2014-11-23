@@ -4,4 +4,17 @@
 #= require nprogress
 #= require nprogress-turbolinks
 #= require turbolinks
-#= require_tree .
+#= require_directory ./libs/
+
+advert_init = ->
+
+  videos = $('.videos')
+  if videos.length
+    console.log 'do isotope'
+    videos.isotope
+      masonry:
+        columnWidth: '.col-md-4'
+      itemSelector: '.video'
+
+$(document).on 'page:load', -> advert_init()
+$(document).ready           -> advert_init()

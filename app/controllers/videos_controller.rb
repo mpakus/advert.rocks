@@ -5,7 +5,7 @@ class VideosController < ApplicationController
   respond_to :html
 
   def index
-    @videos = Video.ordered.page(params[:page]).per(32)
+    @videos = Video.includes(:user).ordered.page(params[:page]).per(32)
     respond_with(@videos)
   end
 
