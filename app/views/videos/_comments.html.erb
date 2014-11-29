@@ -1,5 +1,5 @@
 <div id="comments">
-  <h3><i class="fa fa-lg fa-comments"></i> <%= @video.comments.count %> <%= t('comments', count: @video.comments.count) %></h3>
+  <h3><i class="fa fa-lg fa-comments"></i> <%= @video.comments.count %> <%= t('comments.by_count', count: @video.comments.count) %></h3>
 
   <ul class="comments">
     <% cache @video do %>
@@ -20,16 +20,16 @@
 </div>
 
 <div id="leave-comment">
-  <h2><%= t('leave_comment').html_safe %></h2>
+  <h2><%= t('comments.leave').html_safe %></h2>
   <%= form_tag video_comments_path(@video) do |f| %>
     <% unless user_signed_in? %>
-      <label for="name"><%= t('your_name') %></label>
+      <label for="name"><%= t('comments.your_name') %></label>
       <input type="text" name="name" id="name" value="" required="">
-      <label for="email"><%= t('your_email') %></label>
+      <label for="email"><%= t('comments.your_email') %></label>
       <input type="email" name="email" id="email" value="" required="">
     <% end %>
-    <label for="message"><%= t('message') %></label>
+    <label for="message"><%= t('comments.message') %></label>
     <textarea name="message" id="message" required=""></textarea>
-    <input type="submit" name="submitcomment" id="submitcomment" value="<%= t('submit_comment') %>">
+    <input type="submit" name="submitcomment" id="submitcomment" value="<%= t('comments.submit') %>">
   <% end %>
 </div>

@@ -1690,13 +1690,13 @@ a.next:hover, a.prev:hover {
 }
 
 .author-info {
+    margin-top: 20px;
 	margin-bottom: 70px;
 	overflow: hidden;
 }
 
 .author-info .avatar {
-	width: 15%;
-	margin-right: 3%;
+	width: 120px;
 	float: left;
 }
 
@@ -1708,7 +1708,7 @@ a.next:hover, a.prev:hover {
 }
 
 .author-info .bio {
-	margin-left: 19%;
+	margin-left: 120px;
 	clear:right;
 }
 
@@ -1718,7 +1718,6 @@ a.next:hover, a.prev:hover {
 
 .author-info .bio h5 span {
 	font-size: 12px;
-	margin-left: 15px;
 }
 
 .author-info .bio ul.social {

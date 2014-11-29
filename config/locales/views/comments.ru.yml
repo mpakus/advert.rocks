@@ -1,0 +1,13 @@
+ru:
+  comments:
+    total: комментариев
+    leave: "Оставить <span>Комментарий</span>"
+    your_name: Ваше имя
+    your_email: Ваш E-Mail
+    message: Сообщение
+    submit: Оставить комментарий
+    by_count:
+      one: комментарий
+      few: комментария
+      many: комментариев
+      other: комментариев

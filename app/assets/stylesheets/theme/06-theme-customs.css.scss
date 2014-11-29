@@ -16,3 +16,16 @@
 .video-show{
   width: 100%;
 }
+
+
+.video-buttons{
+  margin-right: 20px;
+}
+
+.video-favorite, .video-like, .video-dislike{
+  @extend .video-buttons;
+  cursor: pointer;
+  &:hover{
+    color: #FFF;
+  }
+}
