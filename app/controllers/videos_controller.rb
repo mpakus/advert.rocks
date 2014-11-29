@@ -30,6 +30,8 @@ class VideosController < ApplicationController
   end
 
   def favorite
+    return redirect_to new_user_session_path unless user_signed_in?
+
     @favorite = current_user.favorite_video(@video)
     respond_with(@favorite)
   end

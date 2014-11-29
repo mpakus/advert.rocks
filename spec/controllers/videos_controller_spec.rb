@@ -106,4 +106,30 @@ RSpec.describe VideosController, :type => :controller do
     end
   end
 
+  describe "POST #favorite" do
+    context "usual visitor" do
+      it "show redirect to login form" do
+        petya  = create(:user, name: 'Petya')
+        @video = create(:video, user: petya)
+        post :favorite, format: :json, id: @video.id
+        expect(response).to redirect_to new_user_session_path
+      end
+    end
+
+    context "loggined user" do
+      before(:each) do
+        vasya  = create(:user, name: 'Vasya')
+        petya  = create(:user, name: 'Petya')
+        @video = create(:video, user: petya)
+        sign_in vasya
+      end
+
+      it "favorite the video" do
+        post :favorite, format: :json, id: @video.id
+        expect(response).to have_http_status 200
+        expect(response).to render_template :favorite
+      end
+
+    end
+  end
 end
