@@ -112,7 +112,7 @@ RSpec.describe VideosController, :type => :controller do
         petya  = create(:user, name: 'Petya')
         @video = create(:video, user: petya)
         post :favorite, format: :json, id: @video.id
-        expect(response).to redirect_to new_user_session_path
+        expect(response).to have_http_status 401
       end
     end
 
