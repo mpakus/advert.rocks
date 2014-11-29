@@ -51,4 +51,19 @@ RSpec.describe User, :type => :model do
     user.valid?
     expect(user.errors[:password]).to include("is too short (minimum is 4 characters)")
   end
+
+  it "own his video" do
+    user = create(:user)
+    video1 = create(:video, user: user)
+    expect(user.own(video1)).to be_truthy
+  end
+
+  it "doesn't own another user's video" do
+    vasya = create(:user, name: 'Vasya')
+    petya = create(:user, name: 'Petya')
+    video1 = create(:video, user: vasya)
+    video2 = create(:video, user: petya)
+    video3 = create(:video, user: petya)
+    expect(vasya.own(video2)).to be_falsey
+  end
 end

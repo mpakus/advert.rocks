@@ -34,4 +34,9 @@ class User < ActiveRecord::Base
   def human_name
     self.name.nil? ? self.email : self.name
   end
+
+  def own(video)
+    self.videos.where(id: video).exists?
+  end
+
 end
