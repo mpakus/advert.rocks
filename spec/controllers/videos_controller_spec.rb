@@ -5,7 +5,7 @@ RSpec.describe VideosController, :type => :controller do
   describe "GET #index" do
     context "usual visitor" do
       before(:each) do
-        create_list(:video, 56)
+        create_list(:video, 10)
       end
 
       it "can watch :index page" do
@@ -16,12 +16,12 @@ RSpec.describe VideosController, :type => :controller do
 
       it "shows 32 videos per page" do
         get :index
-        expect(assigns(:videos).count).to eq 32
+        expect(assigns(:videos).count).to eq 6
       end
 
       it "shows 24 videos on 2nd page" do
         get :index, page: 2
-        expect(assigns(:videos).count).to eq 24
+        expect(assigns(:videos).count).to eq 4
       end
 
     end

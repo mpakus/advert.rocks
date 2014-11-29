@@ -1,7 +1,11 @@
 module VideosHelper
 
   def favorite_video(video, user)
-    user.own(video) ? %Q{<span class="video-favorite glyphicon glyphicon-star"></span>}.html_safe : %Q{<span class="video-favorite glyphicon glyphicon-star-empty"></span>}.html_safe
+    url = favorite_video_path(video, format: :json)
+    user.own(video) ?
+        %Q{<span class="video-favorite glyphicon glyphicon-star" data-url="#{url}"></span>}.html_safe
+        :
+        %Q{<span class="video-favorite glyphicon glyphicon-star-empty" data-url="#{url}"></span>}.html_safe
   end
 
   def gravatar_url(email)

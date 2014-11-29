@@ -5,8 +5,10 @@
 #= require nprogress-turbolinks
 #= require turbolinks
 #= require_directory ./libs/
+#= require_directory ./app/
 
 advert_init = ->
+  @video_favorite = new VideoFavorite('.bio')
 
   videos = $('.videos')
   if videos.length

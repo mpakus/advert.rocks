@@ -61,9 +61,25 @@ RSpec.describe User, :type => :model do
   it "doesn't own another user's video" do
     vasya = create(:user, name: 'Vasya')
     petya = create(:user, name: 'Petya')
-    video1 = create(:video, user: vasya)
     video2 = create(:video, user: petya)
-    video3 = create(:video, user: petya)
     expect(vasya.own(video2)).to be_falsey
   end
+
+  it "can favorite video of the another user" do
+    vasya = create(:user, name: 'Vasya')
+    petya = create(:user, name: 'Petya')
+    video2 = create(:video, user: petya)
+    expect(vasya.favorite_video(video2)).to be_truthy
+  end
+
+  it "unfavorite same video if user do it twice" do
+    vasya = create(:user, name: 'Vasya')
+    petya = create(:user, name: 'Petya')
+    video = create(:video, user: petya)
+    vasya.favorite_video(video)
+    expect(vasya.own(video)).to be_truthy
+
+    expect(vasya.favorite_video(video)).to be_falsey
+  end
+
 end

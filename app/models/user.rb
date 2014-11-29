@@ -36,7 +36,17 @@ class User < ActiveRecord::Base
   end
 
   def own(video)
-    self.videos.where(id: video).exists?
+    self.favorite_videos.where(id: video).exists?
+  end
+
+  def favorite_video(video)
+    if own(video)
+      favorite_videos.delete(video)
+      false
+    else
+      favorite_videos << video
+      true
+    end
   end
 
 end

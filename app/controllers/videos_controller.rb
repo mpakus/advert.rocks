@@ -1,8 +1,9 @@
 class VideosController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_video, only: [:show]
+  before_action :set_video, only: [:show, :favorite]
 
   respond_to :html
+  respond_to :json, only: [:favorite]
 
   def index
     @videos = Video.includes(:user).ordered.page(params[:page]).per(6)
@@ -26,6 +27,11 @@ class VideosController < ApplicationController
     @video = Video.new
     @video.errors.add(:url, e.message)
     render :new
+  end
+
+  def favorite
+    @favorite = current_user.favorite_video(@video)
+    respond_with(@favorite)
   end
 
 #=============>>> @todo
