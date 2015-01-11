@@ -31,4 +31,27 @@ RSpec.describe Video, :type => :model do
     video.valid?
     expect(video.errors[:user]).to include("can't be blank")
   end
+
+  it "is should change video's rating on :like" do
+    video = create(:video)
+    user  = create(:user)
+    video.like!(user)
+    expect(video.rating).to eq 1
+  end
+
+  it "is should change video's rating on :dislike" do
+    video = create(:video)
+    user  = create(:user)
+    video.dislike!(user)
+    expect(video.rating).to eq -1
+  end
+
+  it "is get only censored videos" do
+    create(:video, rating: 1)
+    create(:video, rating: 5)
+    create(:video, rating: -5)
+    create(:video, rating: -15)
+    expect(Video.censored.count).to eq 3
+  end
+
 end

@@ -35,5 +35,4 @@ RSpec.describe Favorite, :type => :model do
     video = create(:video, user: user)
     expect(user.favorite_videos).to include(video)
   end
-
 end

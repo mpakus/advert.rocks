@@ -1,8 +1,22 @@
 module VideosHelper
 
+  def rate_video(video, user, action)
+    return '' if user.own?(video)
+    url = rate_video_path(video, format: :json)
+    if action == :like
+      updown = 'up'
+    else
+      updown = 'down'
+      flip   = 'fa-flip-horizontal'
+    end
+    %Q{
+      <span class="video-rate video-#{action} glyphicon glyphicon-thumbs-#{updown} #{flip}" data-url="#{url}" data-act="#{action}"></span>
+    }.html_safe
+  end
+
   def favorite_video(video, user)
     url = favorite_video_path(video, format: :json)
-    user.own(video) ?
+    user.own?(video) ?
         %Q{<span class="video-favorite glyphicon glyphicon-star" data-url="#{url}"></span>}.html_safe
         :
         %Q{<span class="video-favorite glyphicon glyphicon-star-empty" data-url="#{url}"></span>}.html_safe

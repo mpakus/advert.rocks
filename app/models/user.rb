@@ -35,12 +35,12 @@ class User < ActiveRecord::Base
     self.name.nil? ? self.email : self.name
   end
 
-  def own(video)
+  def own?(video)
     self.favorite_videos.where(id: video).exists?
   end
 
   def favorite_video(video)
-    if own(video)
+    if own?(video)
       favorite_videos.delete(video)
       false
     else

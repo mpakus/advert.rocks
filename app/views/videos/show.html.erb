@@ -11,8 +11,9 @@
       <h5><span><%= t('videos.author') %>:</span> <%= @video.user.human_name %></h5>
       <p>
         <%= favorite_video(@video, current_user) if user_signed_in? %>
-        <span class="video-like glyphicon glyphicon-thumbs-up"></span>
-        <span class="video-dislike glyphicon glyphicon-thumbs-down"></span>
+        <%= rate_video(@video, current_user, :like) if user_signed_in? %>
+        <span class="video-rating"><%= @video.rating %></span>
+        <%= rate_video(@video, current_user, :dislike) if user_signed_in? %>
       </p>
     </div>
   </div>

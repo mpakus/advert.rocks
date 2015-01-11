@@ -9,10 +9,10 @@
 
 advert_init = ->
   @video_favorite = new VideoFavorite('.bio')
+  @video_rate     = new VideoRate('.bio')
 
   videos = $('.videos')
   if videos.length
-    console.log 'do isotope'
     videos.isotope
       masonry:
         columnWidth: '.col-md-4'
@@ -23,7 +23,6 @@ advert_init = ->
       navSelector  : '#page_nav'
       nextSelector : '#page_nav a'
       itemSelector : '.video'
-#      loadingImg   : 'http://i.imgur.com/qkKy8.gif'
       loadingText  : 'Loading...'
       animate      : true
       donetext     : 'THE END'

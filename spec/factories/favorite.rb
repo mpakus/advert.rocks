@@ -14,5 +14,4 @@ FactoryGirl.define do
     user
     video
   end
-
 end

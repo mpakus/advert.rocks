@@ -3,7 +3,11 @@ advert.rocks
 
 advert.rocks - top funny and scary adverts community blog
 
-v 0.4
+v. 0.5
++ users can rate videos (like or dislike too)
++ user has name field now
+
+v. 0.4
 + video tiles with isotope on main page
 + infinity scroller without pagination
 

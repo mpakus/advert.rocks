@@ -21,10 +21,16 @@ FactoryGirl.define do
   factory :video do
     url 'http://www.youtube.com/watch?v=i5GhFL0OWq8'
     user
+    likes 0
+    dislikes 0
+    rating 0
   end
 
   factory :video_vimeo, parent: :video do
     url 'http://vimeo.com/112314245'
     user
+    likes 0
+    dislikes 0
+    rating 0
   end
 end

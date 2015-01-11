@@ -5,6 +5,7 @@ ru:
   devise:
     login: Войти
     email: E-mail
+    name: Имя
     password: Пароль
     remember_me: Запомнить меня
     registration: Регистрация

@@ -55,14 +55,14 @@ RSpec.describe User, :type => :model do
   it "own his video" do
     user = create(:user)
     video1 = create(:video, user: user)
-    expect(user.own(video1)).to be_truthy
+    expect(user.own?(video1)).to be_truthy
   end
 
   it "doesn't own another user's video" do
     vasya = create(:user, name: 'Vasya')
     petya = create(:user, name: 'Petya')
     video2 = create(:video, user: petya)
-    expect(vasya.own(video2)).to be_falsey
+    expect(vasya.own?(video2)).to be_falsey
   end
 
   it "can favorite video of the another user" do
@@ -77,7 +77,7 @@ RSpec.describe User, :type => :model do
     petya = create(:user, name: 'Petya')
     video = create(:video, user: petya)
     vasya.favorite_video(video)
-    expect(vasya.own(video)).to be_truthy
+    expect(vasya.own?(video)).to be_truthy
 
     expect(vasya.favorite_video(video)).to be_falsey
   end
