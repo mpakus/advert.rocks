@@ -1,20 +1,18 @@
-<!-- TOP-BAR -->
 <div id="top-bar">
   <div class="container">
-    <div id="site-description">Welcome to Advert.rocks.</div>
+    <div id="site-description"><%= t('welcome') %></div>
     <ul id="top-links">
       <% if user_signed_in? %>
         <li class="add-video"><a href="<%= new_video_path %>"><i class="glyphicon glyphicon-plus"></i> <span><%= t('videos.new') %></span></a></li>
-        <li class="user-name"><i class="fa fa-lock"></i> <span><%= current_user.email %></span></li>
+        <li class="user-name"><i class="fa fa-lock"></i> <span><%= current_user.human_name %></span></li>
         <li class="logout"><%= link_to destroy_user_session_path, method: :delete do %><i class="fa fa-user"></i> <span><%= t('logout') %></span><% end %></li>
       <% else %>
         <li class="login"><a href="<%= new_user_session_path %>"><i class="fa fa-lock"></i> <span><%= t('login') %></span></a></li>
         <li class="register"><a href="<%= new_user_registration_path %>"><i class="fa fa-user"></i> <span><%= t('register') %></span></a></li>
         <li class="forgot-password"><a href="<%= new_user_password_path %>"><i class="fa fa-user"></i> <span><%= t('forgot_password') %></span></a></li>
       <% end %>
-      <li class="facebook"><a href="#"></a></li>
-      <li class="twitter"><a href="#"></a></li>
-      <li class="google-plus"><a href="#"></a></li>
+      <li class="ru <%= (@current_language == 'ru') ? 'active' : '' %>"><a href="?lang=ru"></a></li>
+      <li class="en <%= (@current_language == 'en') ? 'active' : '' %>"><a href="?lang=en"></a></li>
 <!--
       <li class="youtube"><a href="#"></a></li>
       <li class="search">
@@ -22,7 +20,7 @@
         <a href="#"></a>
       </li>
 -->
-    </ul><!-- end top-links -->
-  </div><!-- end container -->
+    </ul>
+  </div>
 </div>
-<!-- end top-bar -->
+

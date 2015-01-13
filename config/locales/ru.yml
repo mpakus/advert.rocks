@@ -1,8 +1,13 @@
 ru:
+  welcome: Рады вас видеть на Advert.rocks.
   register: Зарегистрироваться
   login: Войти
   logout: Выйти
   forgot_password: Забыли пароль?
   main: Главная
+  contacts: Контакты
+  contacts_text: По всем интересующим вас вопросам можно писать мне на почтовый ящик <a href="mailto:info@aomega.co">info@aomega.co</a>
+  about: О проекте
+  about_text: Advert.rocks - проект созданный, чтобы посетители могли собирать и делиться понравившимися рекламными роликами. Просто для веселья.
   videos:
     page_title: Видео

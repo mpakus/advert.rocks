@@ -14,8 +14,7 @@
 
 body {
 	background: image-url('bg-pattern.png');
-	font-family: 'Helvetica Neue', 'Arial' sans-serif;
-	font-family: 'Dosis';
+	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 14px;
 	color: #777777;
 	min-width: 320px;
@@ -74,8 +73,7 @@ ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Helvetica Neue', 'Arial' sans-serif;
-	font-family: 'Dosis';
+  font-family: 'Open Sans Condensed', sans-serif;
 	color: white;
 }
 
@@ -260,7 +258,7 @@ blockquote.right {
 	font-weight: 600; /* Semi bold */
 }
 
-#top-links li a:hover {
+#top-links li a:hover,  #top-links li.active{
 	text-decoration: none;
 	background-color: #474747 !important;
 }

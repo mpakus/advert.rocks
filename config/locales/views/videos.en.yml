@@ -1,0 +1,5 @@
+en:
+  videos:
+    new: Add video
+    url: "Video's URL (example: https://www.youtube.com/watch?v=9bZkp7q19f0)"
+    author: Author

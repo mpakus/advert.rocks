@@ -1,0 +1,13 @@
+en:
+  comments:
+    total: total
+    leave: "Leave <span>comment</span>"
+    your_name: Name
+    your_email: E-Mail
+    message: Comment
+    submit: Leave it
+    by_count:
+      one: comment
+      few: comments
+      many: comments
+      other: comments

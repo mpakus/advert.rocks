@@ -3,6 +3,11 @@ advert.rocks
 
 advert.rocks - top funny and scary adverts community blog
 
+v. 0.6
++ russian and english localization with interface switch added
++ footer texts about and contacts added too
++ new font
+
 v. 0.5
 + users can rate videos (like or dislike too)
 + user has name field now

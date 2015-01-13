@@ -53,6 +53,7 @@ gem 'annotate'
 gem 'font-awesome-sass'
 gem 'gravatar-ultimate'
 gem 'emoji'
+gem 'http_accept_language'
 
 group :development do
   # gem 'mina'
